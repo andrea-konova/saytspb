@@ -1,5 +1,5 @@
 .header
-  position: fixed
+  // position: fixed
   padding-top: 30px
   left: 0
   top: 0
@@ -9,6 +9,10 @@
   display: flex
   justify-content: space-between
   align-items: center
+  &__wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
   &__logo
     display: flex
     align-items: center
@@ -23,14 +27,31 @@
     text-decoration: none
     color: $dark
 .nav
+  display: flex
+  flex-direction: row
+  padding-right: 2.875rem
   font-size: 1rem
   font-weight: 300
   text-transform: uppercase
   color: $dark
   &__item
-    margin-right: 1.3rem
+    margin-right: 1.2rem
     text-decoration: none
     color: $dark
+    &:last-child
+      margin-right: 0
+    &::after
+      content: ''
+      display: block
+      margin: auto
+      text-align: center
+      height: 2px
+      width: 0%
+      background-color: $red
+      transition: 0.3s
+    &:hover
+      &::after
+        width: 60%
 .contacts__phone
   margin-top: 1rem
   padding-right: 2.875rem

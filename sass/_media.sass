@@ -1,6 +1,9 @@
 @media screen and ( max-width: 1200px )
   html
     font-size: 14px
+    .hero
+      &__social
+        display: none
 @media screen and ( max-width:  992px )
   .header
     .menu
@@ -11,6 +14,9 @@
     .contacts
       &__phone
         padding-right: 1.2rem
+  .features
+    .col-32
+      flex-basis: 47%
 @media screen and ( max-width: 576px )
   html
     font-size: 12px
@@ -20,3 +26,11 @@
         display: none
       &__phone
         padding-right: 0
+  .hero
+    &__title
+      font-size: 2.5rem
+      line-height: 3.4rem
+  .features
+    .col-32
+      flex-basis: 90%
+      margin: 3rem auto 0 auto
