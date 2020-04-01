@@ -9,7 +9,12 @@
     .menu
       &__nav
         display: none
+  .services
+    .col-32
+      flex-basis: 47%
 @media screen and ( max-width: 760px )
+  html
+    font-size: 12px
   .header
     .contacts
       &__phone
@@ -18,8 +23,6 @@
     .col-32
       flex-basis: 47%
 @media screen and ( max-width: 576px )
-  html
-    font-size: 12px
     .header
       .contacts
         &__button
@@ -30,7 +33,11 @@
       &__title
         font-size: 2.5rem
         line-height: 3.4rem
-    .features
+    .features, .services
+      &__row
+        margin-top: 1rem
       .col-32
         flex-basis: 90%
-        margin: 3rem auto 0 auto
+        margin: 2rem auto 0 auto
+
+      

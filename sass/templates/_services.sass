@@ -1,28 +1,33 @@
 .services
-  background: url('../img/services/services-bg.png') center center
+  background: url('../img/services/services-bg.png') no-repeat center top 10rem
   background-size: cover
   &__section-title
     margin-bottom: 3.562rem
   &__row
     flex-wrap: wrap
+    align-content: flex-start
+    justify-content: space-between
   &__card
     display: flex
     flex-direction: column
     margin-bottom: 2.375rem
-    padding: 2.875rem 2.062rem
     width: 100%
     max-width: 22.187rem
-    color: $light
+    background-color: $light
     border: 1px solid #c9c8c8
+    border-radius: 5px
     transition: 0.3s
+    &:last-child
+      opacity: 0
     &::after
       content: ''
       display: block
       margin: auto
       text-align: center
-      height: 2px
+      height: 5px
       width: 0%
       background-color: $red
+      border-radius: 0 0 5px 5px
       transition: 0.3s
     &:hover
       border: none
@@ -31,18 +36,22 @@
         width: 100%
   &__image
     &-wrap
-      margin-bottom: 1.625rem
+      margin-bottom: 0.7rem
       width: 3.125rem
       height: 3.125rem
   &__title
-    margin: 0 0 1.875rem 0
+    margin: 0 0 1.2rem 0
     font-size: 1.625rem
     font-weight: 500
     line-height: 2.333rem
     color: $heading
   &__text
     margin: 0
+    max-width: 18rem
     font-size: 1rem
     font-weight: 300
     line-height: 1.583rem
     color: $heading
+  .card
+    &__wrap
+      margin: 2.8rem auto 2.6rem auto
