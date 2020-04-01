@@ -467,7 +467,7 @@ img {
     height: 100%; }
 
 .social {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: end;
   transform: rotate(90deg); }
@@ -567,6 +567,37 @@ img {
     color: #2c2c2d; }
   .services .card__wrap {
     margin: 2.8rem auto 2.6rem auto; }
+
+.footer {
+  padding-bottom: 2.5rem;
+  background: #f9f9f9 url("../img/footer-bg.png") center center/cover; }
+  .footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column; }
+  .footer__image {
+    margin-bottom: 0.6rem;
+    width: 3.625rem;
+    height: 3.625rem; }
+  .footer__logo {
+    display: flex;
+    flex-direction: column;
+    margin: 1.2rem auto 2.7rem auto; }
+  .footer__link {
+    margin: 0; }
+  .footer__line {
+    margin-bottom: 2.5rem;
+    width: 70%;
+    max-width: 54.125rem;
+    height: 1px;
+    background-color: #3c3a3a; }
+  .footer__text {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 2.333rem;
+    color: #151515; }
 
 @media screen and (max-width: 1200px) {
   html {
