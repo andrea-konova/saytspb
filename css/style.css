@@ -368,40 +368,6 @@ img {
     color: #ff5a3c;
     border: 0.125rem solid #ff5a3c; }
 
-@media screen and (max-width: 1200px) {
-  html {
-    font-size: 14px; } }
-
-@media screen and (max-width: 992px) {
-  .hero__social {
-    display: none; }
-  .header .menu__nav {
-    display: none; }
-  .services .col-32 {
-    flex-basis: 47%; } }
-
-@media screen and (max-width: 760px) {
-  html {
-    font-size: 12px; }
-  .header .contacts__phone {
-    padding-right: 1.2rem; }
-  .features .col-32 {
-    flex-basis: 47%; } }
-
-@media screen and (max-width: 576px) {
-  .header .contacts__button {
-    display: none; }
-  .header .contacts__phone {
-    padding-right: 0; }
-  .hero__title {
-    font-size: 2.5rem;
-    line-height: 3.4rem; }
-  .features__row, .services__row {
-    margin-top: 1rem; }
-  .features .col-32, .services .col-32 {
-    flex-basis: 90%;
-    margin: 2rem auto 0 auto; } }
-
 .header {
   padding-top: 30px;
   left: 0;
@@ -412,6 +378,8 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  .menu__btn {
+    display: none; }
   .menu__wrap {
     display: flex;
     justify-content: space-between;
@@ -599,3 +567,118 @@ img {
     color: #2c2c2d; }
   .services .card__wrap {
     margin: 2.8rem auto 2.6rem auto; }
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 14px; } }
+
+@media screen and (max-width: 992px) {
+  .hero__social {
+    display: none; }
+  .header .menu {
+    flex-direction: column;
+    flex-wrap: wrap; }
+    .header .menu__nav {
+      padding-right: 0;
+      font-size: 14px; }
+    .header .menu__wrap {
+      flex-direction: column;
+      margin-top: 0.5rem; }
+    .header .menu__contacts {
+      margin-top: 0.5rem; }
+  .services .row {
+    justify-content: space-around; }
+  .services .col-32 {
+    flex-basis: 47%; } }
+
+@media screen and (max-width: 760px) {
+  html {
+    font-size: 12px; }
+  .contacts__phone {
+    padding-right: 1.2rem; }
+  .features .col-32 {
+    flex-basis: 47%; } }
+
+@media screen and (max-width: 576px) {
+  .menu {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0 25px 0;
+    width: 75%;
+    top: 0;
+    right: 0;
+    background-color: #e3fbdd;
+    border-left: 2px solid #ff5a3c;
+    border-bottom: 2px solid #ff5a3c;
+    border-bottom-left-radius: 5px; }
+    .menu__btn {
+      display: block;
+      position: absolute;
+      top: 28px;
+      right: 20px;
+      width: 30px;
+      height: 2px;
+      background-color: #ff5a3c;
+      border: none;
+      cursor: pointer; }
+      .menu__btn::before {
+        content: '';
+        display: block;
+        position: absolute;
+        margin-top: -8px;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 2px;
+        transition: transform 0.2s;
+        background-color: #ff5a3c; }
+      .menu__btn::after {
+        content: '';
+        display: block;
+        position: absolute;
+        margin-top: 8px;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 2px;
+        transition: transform 0.2s;
+        background-color: #ff5a3c; }
+      .menu__btn--active {
+        height: 0; }
+        .menu__btn--active::before {
+          transform: rotate(45deg);
+          margin-top: 0; }
+        .menu__btn--active::after {
+          transform: rotate(-45deg);
+          margin-top: 0; }
+  .menu--active {
+    display: flex; }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    margin: 14px 0; }
+    .nav__item {
+      margin-right: 0;
+      margin-bottom: 1rem;
+      font-size: 20px; }
+      .nav__item:last-child {
+        margin-bottom: 0; }
+  .contacts {
+    display: flex;
+    flex-direction: column; }
+    .contacts__phone {
+      display: none; }
+    .contacts__button {
+      font-size: 16px; }
+  .hero__title {
+    font-size: 2.5rem;
+    line-height: 3.4rem; }
+  .features__row, .services__row {
+    margin-top: 1rem; }
+  .features .col-32, .services .col-32 {
+    flex-basis: 90%;
+    margin: 2rem auto 0 auto; }
+  .services__section-title {
+    margin-bottom: 1rem; } }
