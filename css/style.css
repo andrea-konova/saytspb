@@ -353,7 +353,8 @@ img {
       line-height: 1.375; }
 
 .button {
-  padding: 0.7rem 1.9rem 0.9rem 2rem;
+  width: 11.812rem;
+  height: 2.687rem;
   font-size: 1rem;
   font-weight: 500;
   border: none;
@@ -361,9 +362,11 @@ img {
   color: #ffffff;
   background-color: #ff5a3c;
   transition: background-color 0.3s; }
+  .button--long {
+    width: 13.687rem;
+    height: 3.062rem; }
   .button:hover {
     cursor: pointer;
-    padding: 0.575rem 1.775rem 0.775rem 1.875rem;
     background-color: #ffffff;
     color: #ff5a3c;
     border: 0.125rem solid #ff5a3c; }
@@ -669,9 +672,6 @@ img {
     line-height: 2.187rem; }
   .feedback__client {
     margin-bottom: 3.812rem; }
-  .feedback__button {
-    padding: 0.7rem 3.9rem 0.9rem 4rem !important;
-    padding: 0.575rem 3.775rem 0.775rem 3.875rem !important; }
 
 .client__wrap {
   width: 6.562rem;
