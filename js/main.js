@@ -1,12 +1,17 @@
 
-var menuButton = document.querySelector('.menu__btn');
-var menu = document.querySelector('.menu');
-menuButton.addEventListener('click', function () {
-  menuButton.classList.toggle('menu__btn--active');
-  menu.classList.toggle('menu--active');  
-})
-
 $(document).ready(function () {
+  //burger-menu
+  $(document).ready(function () {
+    var menuButton = $('.menu__btn'),
+        menu = $('.menu');
+  
+    menuButton.on('click', function () {
+      menuButton.toggleClass('menu__btn--active');
+      menu.toggleClass('menu--active');
+    })
+
+  }); 
+
   // youtube video
   var player;
   $('.play__img').on('click', function onYouTubeIframeAPIReady() {
