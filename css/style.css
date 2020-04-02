@@ -443,8 +443,8 @@ img {
   align-items: start;
   flex-direction: column;
   margin-top: 0;
-  min-height: 100%;
-  height: 100vh; }
+  padding-bottom: 26rem;
+  min-height: 100%; }
   .hero__title {
     margin-bottom: 2.4rem;
     max-width: 46rem;
@@ -483,6 +483,69 @@ img {
     align-items: center;
     transform: rotate(-90deg);
     margin-right: 1rem; }
+
+.video {
+  padding: 2.2rem 0 0 0;
+  background: #d8d8d8 url("../img/video/video-bg.png") no-repeat center; }
+  .video__player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 27rem; }
+
+.play {
+  position: relative;
+  margin-bottom: 5rem;
+  width: 5.812rem;
+  height: 5.812rem;
+  border: none;
+  border-radius: 50%;
+  background-color: #d9d9d8;
+  opacity: 0.68; }
+  .play::before {
+    content: '';
+    position: absolute;
+    width: 7.625rem;
+    height: 7.625rem;
+    top: -0.9062rem;
+    left: -0.9062rem;
+    border-radius: 50%;
+    background-color: #090909;
+    opacity: 0.4; }
+  .play:hover {
+    cursor: pointer;
+    opacity: 0.9; }
+    .play:hover::before {
+      background-color: #ff5a3c;
+      opacity: 0.2; }
+  .play__img {
+    position: relative;
+    transform: translateX(5px); }
+
+.statistics {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -10rem;
+  width: 100%;
+  background: #ffffff url("../img/video/statistics.png") no-repeat center bottom 25px;
+  box-shadow: 0 0 22px 5px rgba(34, 34, 34, 0.05); }
+  .statistics__item {
+    margin: 6.2rem auto 6.5rem auto;
+    text-align: center; }
+
+.item__number {
+  margin: 0;
+  font-size: 3.875rem;
+  font-weight: 700;
+  line-height: 5.195rem;
+  color: #ff5a3c; }
+
+.item__text {
+  margin: 0;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 2.333rem; }
 
 .features__row {
   flex-wrap: wrap;
@@ -607,7 +670,6 @@ img {
   .hero__social {
     display: none; }
   .header .menu {
-    flex-direction: column;
     flex-wrap: wrap; }
     .header .menu__nav {
       padding-right: 0;

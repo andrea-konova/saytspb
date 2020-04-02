@@ -1,0 +1,59 @@
+.video
+  padding: 2.2rem 0 0 0
+  background: #d8d8d8 url('../img/video/video-bg.png') no-repeat center
+  &__player
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 27rem    
+.play
+  position: relative
+  margin-bottom: 5rem
+  width: 5.812rem
+  height: 5.812rem
+  border: none
+  border-radius: 50%
+  background-color: #d9d9d8
+  opacity: 0.68
+  &::before
+    content: ''
+    position: absolute
+    width: 7.625rem
+    height: 7.625rem
+    top: -0.9062rem
+    left: -0.9062rem
+    border-radius: 50%
+    background-color: #090909
+    opacity: 0.4
+  &:hover
+    cursor: pointer
+    opacity: 0.9
+    &::before
+      background-color: $red
+      opacity: 0.2
+  &__img
+    position: relative
+    transform: translateX(5px)
+.statistics
+  display: flex
+  align-items: center
+  justify-content: space-around
+  margin-top: -10rem
+  width: 100%
+  background: $light url('../img/video/statistics.png') no-repeat center bottom 25px
+  box-shadow: 0 0 22px 5px rgba(34, 34, 34, 0.05)
+  &__item
+    margin: 6.2rem auto 6.5rem auto
+    text-align: center
+.item
+  &__number
+    margin: 0
+    font-size: 3.875rem
+    font-weight: 700
+    line-height: 5.195rem
+    color: $red
+  &__text
+    margin: 0
+    font-size: 1.375rem
+    font-weight: 700
+    line-height: 2.333rem

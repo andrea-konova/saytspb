@@ -6,3 +6,23 @@ menuButton.addEventListener('click', function () {
   menu.classList.toggle('menu--active');  
 })
 
+$(document).ready(function () {
+  // youtube video
+  var player;
+  $('.play__img').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '100',
+      width: '100%',
+      videoId: 'vCd2kEA9Dv0',
+      events: {
+        'onReady': videoPlay
+      }
+    });
+  })
+
+  function videoPlay(event) {
+    event.target.playVideo();
+  }
+  
+
+})
