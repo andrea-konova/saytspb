@@ -1,0 +1,79 @@
+.news
+  padding-top: 3.48rem
+  padding-bottom: 0
+  background: #e3fbdd
+  &__section-title
+    padding-bottom: 3.38rem
+  &-title
+    &__heading
+      margin-bottom: 1.7rem
+  &__card
+    position: relative
+    margin-bottom: 13.437rem
+  &__day
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    top: 1.5rem
+    left: 1.312rem
+    width: 3.5rem
+    height: 4.125rem
+    border: none
+    border-radius: 5px
+    background-color: $red
+  &__note
+    position: absolute
+    display: flex
+    align-items: start
+    flex-direction: column
+    padding: 2.25rem 2.562rem 
+    top: 15.312rem
+    left: 38.437rem
+    max-width: 34.375rem
+    border-radius: 5px
+    background-color: $light
+    box-shadow: 0 0 10px 3px rgba(34, 34, 34, 0.05)
+.day
+  line-height: 1.125rem
+  color: $light
+  &__number
+    margin: 0
+    font-size: 1.25rem
+    font-weight: 700
+  &__month
+    margin: 0
+    font-size: 0.875rem
+    font-weight: 400
+.note
+  &__title
+    margin: 0
+    margin-bottom: 1.7rem
+    font-size: 1.25rem
+    font-weight: 500
+    line-height: 1.125rem
+    color: #121111
+  &__info
+    margin: 0
+    margin-bottom: 2.487rem
+    max-width: 28.625rem
+    font-size: 1rem
+    font-weight: 300
+    line-height: 1.645rem
+.news
+  &-button
+    &-prev, &-next
+      bottom: 19%
+      top: auto
+      background-size: 42px
+      width: 56px
+      height: 32px
+      &::after
+        display: none
+    &-prev
+      left: 0
+      background: url('../img/news/prev.png') no-repeat center
+    &-next
+      left: 75px
+      background: url('../img/news/next.png') no-repeat center

@@ -21,6 +21,10 @@
       justify-content: space-around
     .col-32
       flex-basis: 47%
+  .news
+    &__note
+      top: 7.125rem
+      left: 6.1rem
 @media screen and ( max-width: 760px )
   html
     font-size: 12px
@@ -116,5 +120,17 @@
     .services
       &__section-title
         margin-bottom: 1rem
+    .news
+      &__day
+        display: none
+      &__note
+        position: static
+        max-width: 100%
+    .card
+      &__img
+        display: none
+    .note
+      &__info
+        max-width: 100%
 
       
