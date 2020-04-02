@@ -12,6 +12,20 @@ $(document).ready(function () {
 
   }); 
 
+  // up-arrow jquery
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 200) {
+      $('.scrollup').fadeIn();
+    } else {
+      $('.scrollup').fadeOut();
+    }
+  });
+
+  $('.scrollup').click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+  });
+
   // youtube video
   var player;
   $('.play__img').on('click', function onYouTubeIframeAPIReady() {
@@ -27,7 +41,17 @@ $(document).ready(function () {
 
   function videoPlay(event) {
     event.target.playVideo();
-  }
+  };
   
+  // swiper-slider
+  var mySwiper = new Swiper('.swiper-container', {
+    loop: true,
+     navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  })
+
+  new WOW().init();
 
 })

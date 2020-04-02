@@ -368,6 +368,15 @@ img {
     color: #ff5a3c;
     border: 0.125rem solid #ff5a3c; }
 
+.scrollup {
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  text-indent: -9999px;
+  background: url("../img/up-arrow.png") no-repeat; }
+
 .header {
   padding-top: 30px;
   left: 0;
@@ -630,6 +639,73 @@ img {
     color: #2c2c2d; }
   .services .card__wrap {
     margin: 2.8rem auto 2.6rem auto; }
+
+.feedback {
+  background: url("../img/feedback/feedback-bg.png") no-repeat center center; }
+  .feedback-title__heading {
+    margin-bottom: 1.8rem; }
+  .feedback-title__text {
+    margin-bottom: 5.162rem; }
+  .feedback__link {
+    color: #ff5a3c; }
+  .feedback__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 1rem; }
+  .feedback__client {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .feedback__text {
+    margin: 0;
+    margin-bottom: 2rem;
+    width: 90%;
+    max-width: 58rem;
+    text-align: center;
+    font-size: 1.375rem;
+    font-weight: 300;
+    line-height: 2.187rem; }
+  .feedback__client {
+    margin-bottom: 3.812rem; }
+  .feedback__button {
+    padding: 0.7rem 3.9rem 0.9rem 4rem !important;
+    padding: 0.575rem 3.775rem 0.775rem 3.875rem !important; }
+
+.client__wrap {
+  width: 6.562rem;
+  height: 6.562rem;
+  margin-right: 1rem; }
+
+.client__name {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #0d0d0d; }
+
+.client__place {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #848281; }
+
+.swiper-button-prev, .swiper-button-next {
+  bottom: auto;
+  top: 38%;
+  background-size: 42px;
+  width: 23px;
+  height: 43px; }
+  .swiper-button-prev::after, .swiper-button-next::after {
+    display: none; }
+
+.swiper-button-prev {
+  left: 5%;
+  background: url("../img/arrow-prev.png") no-repeat center; }
+
+.swiper-button-next {
+  right: 5%;
+  background: url("../img/arrow-next.png") no-repeat center; }
 
 .footer {
   padding-bottom: 2.5rem;
