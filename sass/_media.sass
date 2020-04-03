@@ -25,9 +25,6 @@
     width: 80%
     margin: auto
     padding: 3.25rem
-    background: $light
-    &__wrap
-      background: $light 
   .news
     &__note
       top: 7.125rem
@@ -42,7 +39,19 @@
     .col-32
       flex-basis: 47%
   .form
-    width: 100%
+    width: 90%
+    margin: auto
+    padding: 3.25rem
+    &__wrap
+      background: $bg-color
+  .questions
+    &__contacts
+      width: 90%
+      margin: 0 auto
+    &__wrap
+      flex-wrap: wrap
+      align-items: center
+      justify-content: center
 @media screen and ( max-width: 576px )
     .menu
       display: none
