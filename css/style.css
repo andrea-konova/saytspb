@@ -387,6 +387,25 @@ img {
   text-indent: -9999px;
   background: url("../img/up-arrow.png") no-repeat; }
 
+.input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.362rem;
+  width: 100%; }
+
+label.invalid {
+  color: orange; }
+
+input.invalid {
+  border-bottom: 1px solid orange; }
+
+em.invalid {
+  position: absolute;
+  top: 0;
+  right: 1px;
+  color: orange; }
+
 .header {
   padding-top: 30px;
   left: 0;
@@ -678,13 +697,7 @@ img {
     border-bottom: 1px solid #939497;
     font-size: 1.125rem;
     font-weight: 300;
-    background: none; }
-
-.input-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.362rem;
-  width: 100%; }
+    background-color: transparent; }
 
 .cost {
   padding: 5rem 0;
@@ -941,10 +954,11 @@ img {
   background: url("../img/news/next.png") no-repeat center; }
 
 .questions {
-  background: url("../img/questions/questions-bg.png") no-repeat center left 50rem; }
+  padding: 2.5rem 0;
+  background: url("../img/questions/questions-bg.png") no-repeat center right -19rem; }
   .questions__wrap {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: flex-start; }
   .questions__contacts {
     display: flex;
@@ -955,6 +969,8 @@ img {
     color: #faf6f5; }
   .questions__input {
     color: #413f3e; }
+  .questions__form {
+    margin-top: 4.15rem; }
 
 .contacts {
   max-width: 31rem;
@@ -1034,6 +1050,98 @@ img {
     font-weight: 500;
     line-height: 2.333rem;
     color: #151515; }
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(227, 251, 221, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible; }
+  .modal__dialog {
+    position: relative;
+    background: #ffffff;
+    max-width: 23.187rem;
+    color: #ffffff; }
+  .modal__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    background: transparent url("../img/close.png") no-repeat center;
+    border: none;
+    margin: 12px;
+    cursor: pointer; }
+  .modal__form {
+    display: flex;
+    flex-direction: column;
+    padding: 2.437rem 0 1.75rem 0;
+    width: 23.187rem;
+    box-shadow: 0 0 7px 6px rgba(34, 34, 34, 0.05); }
+  .modal__input {
+    margin: 0 auto 1.187rem auto;
+    padding-left: 1.125rem;
+    max-width: 20rem;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 2.333rem;
+    border-radius: 10px;
+    border: 1px solid #b1b0b0; }
+  .modal__button {
+    margin: auto; }
+
+.thanks {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(227, 251, 221, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .thanks--visible {
+    opacity: 1;
+    visibility: visible; }
+  .thanks__dialog {
+    position: relative;
+    background: #ffffff;
+    max-width: 23.187rem; }
+  .thanks__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    background: transparent url("../img/close.png") no-repeat center;
+    border: none;
+    margin: 12px;
+    cursor: pointer; }
+  .thanks__title {
+    margin: 0 auto 1rem auto;
+    padding: 1rem 2rem 0 2rem;
+    text-align: center; }
+  .thanks__subtitle {
+    margin: 0;
+    padding-bottom: 1rem;
+    text-align: center; }
 
 @media screen and (max-width: 1200px) {
   html {

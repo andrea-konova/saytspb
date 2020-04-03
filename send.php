@@ -2,8 +2,9 @@
 
 $userName = $_POST['userName'];
 $userEmail = $_POST['userEmail'];
-$userPhone = $_POST['userPhone'];
-$userQuestion = $_POST['userQuestion'];
+$userSite = $_POST['userSite'];
+$userMessage = $_POST['userMessage'];
+$userPhone= $_POST['userPhone'];
 
 // Load Composer's autoloader
 require 'phpmailer/Exception.php';

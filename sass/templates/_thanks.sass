@@ -1,0 +1,40 @@
+.thanks
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  z-index: 3
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba($bg-color, 0.6)
+  display: flex
+  align-items: center
+  justify-content: center
+  &--visible
+    opacity: 1
+    visibility: visible
+  &__dialog
+    position: relative
+    background: $light 
+    max-width: 23.187rem
+  &__close
+    position: absolute
+    top: 0
+    right: 0
+    width: 28px
+    height: 28px
+    background: transparent url('../img/close.png') no-repeat center
+    border: none
+    margin: 12px
+    cursor: pointer
+  &__title 
+    margin: 0 auto 1rem auto
+    padding: 1rem 2rem 0 2rem
+    text-align: center
+  &__subtitle
+    margin: 0
+    padding-bottom: 1rem
+    text-align: center

@@ -32,7 +32,7 @@
             </nav>
             <div class="contacts menu__contacts">
               <a href="tel:+78129921030" class="link phone contacts__phone">+7(812)-992-10-30</a>
-              <button class="button contacts__button">Заказать звонок</button>
+              <button class="button contacts__button" data-toggle="modal">Заказать звонок</button>
             </div>
           </div>
           <!-- /.menu__wrap -->
@@ -258,7 +258,7 @@
     <section class="cost section">
       <div class="container">
         <div class="form__wrap">
-          <form action="#" class="form cost__form">
+          <form action="send.php" method="POST" class="form cost__form">
             <h2 class="form__title">Узнать стоимость</h2>
             <div class="input-group form__input-group">
               <label for="cost-user-name" class="label form__label cost__label">Имя</label>
@@ -277,7 +277,7 @@
             </div>
             <div class="input-group form__input-group">
               <label for="cost-user-message " class="label form__label cost__label">Сообщение</label>
-              <input type="text" autocomplete="off" name="userMessage " class="input form__input cost__input"
+              <input type="text" autocomplete="off" name="userMessage" class="input form__input cost__input"
                 id="cost-user-message " placeholder="Введите Ваше сообщение">
             </div>
             <button class="button button--long cost__button">Узнать стоимость</button>
@@ -616,7 +616,7 @@
             <!-- /.contacts__address -->
           </div>
           <!-- /.questions__contacts -->
-          <form action="" class="questions__form">
+          <form action="send.php" method="POST" class="questions__form">
             <form action="#" class="form questions__form">
               <div class="input-group form__input-group">
                 <label for="questions-user-name" class="label form__label questions__label">Имя</label>
@@ -635,7 +635,7 @@
               </div>
               <div class="input-group form__input-group">
                 <label for="questions-user-message " class="label form__label questions__label">Сообщение</label>
-                <input type="text" autocomplete="off" name="userMessage " class="input form__input questions__input"
+                <input type="text" autocomplete="off" name="userMessage" class="input form__input questions__input"
                   id="questions-user-message " placeholder="Введите Ваше сообщение">
               </div>
               <button class="button button--long questions__button button--outline">Отправить</button>
@@ -666,8 +666,34 @@
     </div>
     <!-- /.container -->
   </footer>
+
+  <div class="modal">
+    <div class="modal__dialog">
+      <button class="modal__close"></button>
+      <form action="send.php" method="POST" class="modal__form">
+        <input type="text" autocomplete="off" name="userName" class="input form__input modal__input" id="modal-user-name" placeholder="Ваше имя">
+        <input type="tel" autocomplete="off" name="userPhone" class="input form__input modal__input" id="modal-user-phone" placeholder="Ваш номер телефона">
+        <button class="button modal__button">Отправить</button>
+      </form>
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
+  <!-- /.modal -->
+
+  <div class="thanks">
+    <div class="thanks__dialog">
+      <button class="thanks__close"></button>
+      <h2 class="thanks__title">Спасибо за обращение</h2>
+      <h3 class="thanks__subtitle">Мы свяжемся с Вами в течении 15&nbsp;минут</h3>
+    </div>
+    <!-- /.thanks__dialog -->
+  </div>
+  <!-- /.thanks -->
+
   <script src="js/jquery-3.4.1.min.js"
     ></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/main.js"></script>
 </body>

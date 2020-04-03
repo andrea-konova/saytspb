@@ -1,5 +1,4 @@
 .button
-  // padding: 0.7rem 1.9rem 0.9rem 2rem
   width: 11.812rem
   height: 2.687rem
   font-size: 1rem
@@ -33,3 +32,22 @@
   display:none
   text-indent: -9999px
   background: url('../img/up-arrow.png') no-repeat
+.input
+  &-group
+    position: relative
+    display: flex
+    flex-direction: column
+    margin-bottom: 1.362rem
+    width: 100%
+label
+  &.invalid
+    color: $error
+input
+  &.invalid
+    border-bottom: 1px solid $error
+em
+  &.invalid
+    position: absolute
+    top: 0
+    right: 1px
+    color: $error
