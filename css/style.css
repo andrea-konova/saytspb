@@ -588,10 +588,12 @@ img {
   height: 2.5rem; }
 
 .services {
-  background: url("../img/services/services-bg.png") no-repeat center top 10rem;
-  background-size: cover; }
+  padding-bottom: 1.8rem;
+  background: url("../img/services/services-bg.png") no-repeat center top 11rem; }
   .services__section-title {
-    margin-bottom: 3.562rem; }
+    margin-bottom: 3.362rem; }
+  .services-title__heading {
+    margin-bottom: 1.7rem; }
   .services__row {
     flex-wrap: wrap;
     align-content: flex-start;
@@ -624,11 +626,11 @@ img {
       .services__card:hover::after {
         width: 100%; }
   .services__image-wrap {
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.75rem;
     width: 3.125rem;
     height: 3.125rem; }
   .services__title {
-    margin: 0 0 1.2rem 0;
+    margin: 0 0 1.3rem 0;
     font-size: 1.625rem;
     font-weight: 500;
     line-height: 2.333rem;
@@ -641,7 +643,51 @@ img {
     line-height: 1.583rem;
     color: #2c2c2d; }
   .services .card__wrap {
-    margin: 2.8rem auto 2.6rem auto; }
+    margin: 2.8rem auto 2.45rem auto; }
+
+.form {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  flex-basis: 100%;
+  padding: 5.35rem 3.25rem;
+  width: 57%; }
+  .form__wrap {
+    background: #ffffff url("../img/cost/cost-form-bg.png") no-repeat right center; }
+  .form__title {
+    margin: 0 auto 2.75rem auto;
+    font-size: 1.875rem;
+    line-height: 1.437rem; }
+  .form__label {
+    margin-bottom: 0.45rem;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.17rem;
+    text-transform: uppercase; }
+  .form__input {
+    max-width: 34.25rem;
+    padding-bottom: 0.17rem;
+    border: none;
+    border-bottom: 1px solid #939497;
+    font-size: 1.125rem;
+    font-weight: 300; }
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.362rem;
+  width: 100%; }
+
+.cost {
+  padding: 5rem 0;
+  background: url("../img/cost/cost-bg.png") no-repeat center center; }
+  .cost__label {
+    color: #939292; }
+  .cost__input {
+    color: #1e1e1e; }
+  .cost__button {
+    margin: auto;
+    margin-top: 1.347rem; }
 
 .cases-title__heading {
   margin-bottom: 1.8rem; }
@@ -836,7 +882,7 @@ img {
     padding: 2.25rem 2.562rem;
     top: 15.312rem;
     left: 38.437rem;
-    max-width: 34.375rem;
+    max-width: 34.688rem;
     border-radius: 5px;
     background-color: #ffffff;
     box-shadow: 0 0 10px 3px rgba(34, 34, 34, 0.05); }
@@ -938,6 +984,13 @@ img {
     justify-content: space-around; }
   .services .col-32 {
     flex-basis: 47%; }
+  .form {
+    width: 80%;
+    margin: auto;
+    padding: 3.25rem;
+    background: #ffffff; }
+    .form__wrap {
+      background: #ffffff; }
   .news__note {
     top: 7.125rem;
     left: 6.1rem; } }
@@ -948,7 +1001,9 @@ img {
   .contacts__phone {
     padding-right: 1.2rem; }
   .features .col-32 {
-    flex-basis: 47%; } }
+    flex-basis: 47%; }
+  .form {
+    width: 100%; } }
 
 @media screen and (max-width: 576px) {
   .menu {
