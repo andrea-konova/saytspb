@@ -21,13 +21,18 @@
       justify-content: space-around
     .col-32
       flex-basis: 47%
+  .feedback
+    &-button
+      &-prev, &-next
+        bottom: auto
+        top: 50%
   .form
     width: 80%
     margin: auto
     padding: 3.25rem
   .news
     &__note
-      top: 7.125rem
+      top: 1.5rem
       left: 6.1rem
 @media screen and ( max-width: 760px )
   html
@@ -44,6 +49,19 @@
     padding: 3.25rem
     &__wrap
       background: $bg-color
+  .card
+      &__img
+        display: none
+  .news
+    &__card
+      display: flex
+      align-items: start
+    &__day
+      position: static
+      margin-right: 1.312rem
+    &__note
+      position: static
+      max-width: 100%
   .questions
     &__contacts
       width: 90%
@@ -142,15 +160,23 @@
     .services
       &__section-title
         margin-bottom: 1rem
+    .feedback
+      &-title
+        &__text
+          margin-bottom: 2rem
+      &__button
+        margin-top: 2rem
+    .feedback
+      &-button
+        &-prev, &-next
+          bottom: auto
+          top: 85%
     .news
       &__day
         display: none
       &__note
         position: static
         max-width: 100%
-    .card
-      &__img
-        display: none
     .note
       &__info
         max-width: 100%

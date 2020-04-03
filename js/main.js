@@ -94,7 +94,8 @@ $(document).ready(function () {
       },
       userMessage: {
         required: true,
-        minlength: 17
+        minlength: 10,
+        maxlength: 100
       },
        
     },
@@ -113,7 +114,8 @@ $(document).ready(function () {
       },
       userMessage: {
         required: "Заполните поле",
-        minlength: "Cообщение слишком короткое"
+        minlength: "Cообщение слишком короткое",
+        maxlength: "Cообщение слишком длинное"
       },
     },
     
@@ -153,7 +155,8 @@ $(document).ready(function () {
       },
       userMessage: {
         required: true,
-        minlength: 17
+        minlength: 10,
+        maxlength: 100
       },
        
     },
@@ -172,7 +175,50 @@ $(document).ready(function () {
       },
       userMessage: {
         required: "Заполните поле",
-        minlength: "сообщение слишком короткое"
+        minlength: "Сообщение слишком короткое",
+        maxlength: "Сообщение слишком длинное"
+      },
+    },
+    
+    // отправка формы через ajax 
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "./send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          thanks.addClass('thanks--visible');
+        },
+        error: function (response) {
+          console.error('Ошибка запроса ' + response);
+        }
+      });
+    }
+  });
+
+  // modal__form
+  $('.modal__form').validate({
+    errorElement: "em",
+    errorClass: "invalid",
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: {
+        required: true
+      },
+    },
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче 2 букв",
+        maxlength: "Имя не длиннее 15 букв"
+      },
+      userPhone: {
+        required: "Заполните поле",
       },
     },
     

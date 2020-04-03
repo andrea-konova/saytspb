@@ -881,7 +881,9 @@ em.invalid {
     margin-bottom: 1.7rem; }
   .news__card {
     position: relative;
-    margin-bottom: 13.437rem; }
+    margin: 0 auto;
+    margin-bottom: 13.437rem;
+    width: 99%; }
   .news__day {
     position: absolute;
     display: flex;
@@ -1091,6 +1093,7 @@ em.invalid {
     width: 23.187rem;
     box-shadow: 0 0 7px 6px rgba(34, 34, 34, 0.05); }
   .modal__input {
+    position: relative;
     margin: 0 auto 1.187rem auto;
     padding-left: 1.125rem;
     max-width: 20rem;
@@ -1164,12 +1167,15 @@ em.invalid {
     justify-content: space-around; }
   .services .col-32 {
     flex-basis: 47%; }
+  .feedback-button-prev, .feedback-button-next {
+    bottom: auto;
+    top: 50%; }
   .form {
     width: 80%;
     margin: auto;
     padding: 3.25rem; }
   .news__note {
-    top: 7.125rem;
+    top: 1.5rem;
     left: 6.1rem; } }
 
 @media screen and (max-width: 760px) {
@@ -1185,6 +1191,17 @@ em.invalid {
     padding: 3.25rem; }
     .form__wrap {
       background: #e3fbdd; }
+  .card__img {
+    display: none; }
+  .news__card {
+    display: flex;
+    align-items: start; }
+  .news__day {
+    position: static;
+    margin-right: 1.312rem; }
+  .news__note {
+    position: static;
+    max-width: 100%; }
   .questions__contacts {
     width: 90%;
     margin: 0 auto; }
@@ -1280,12 +1297,17 @@ em.invalid {
     margin: 2rem auto 0 auto; }
   .services__section-title {
     margin-bottom: 1rem; }
+  .feedback-title__text {
+    margin-bottom: 2rem; }
+  .feedback__button {
+    margin-top: 2rem; }
+  .feedback-button-prev, .feedback-button-next {
+    bottom: auto;
+    top: 85%; }
   .news__day {
     display: none; }
   .news__note {
     position: static;
     max-width: 100%; }
-  .card__img {
-    display: none; }
   .note__info {
     max-width: 100%; } }
