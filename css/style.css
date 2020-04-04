@@ -514,20 +514,19 @@ i.mistake {
 
 .social {
   position: absolute;
-  top: 169px;
-  left: 68px;
+  top: 10.562rem;
+  left: 4.25rem;
   display: flex;
   align-items: center;
   flex-direction: column; }
   .social__line {
-    margin-bottom: 38px;
-    width: 4px;
-    height: 620px;
-    border-radius: 2px;
-    background-color: red; }
+    margin-bottom: 2.375rem;
+    width: 0.25rem;
+    height: 38.75rem;
+    border-radius: 0.125rem;
+    background-color: #ff5a3c; }
   .social__link {
-    margin-bottom: 38px;
-    border-radius: 1px solid red; }
+    margin-bottom: 2.375rem; }
 
 .video {
   padding: 2.2rem 0 0 0;
@@ -982,7 +981,7 @@ i.mistake {
 
 .questions {
   padding: 2.5rem 0;
-  background: url("../img/questions/questions-bg.png") no-repeat center right -19rem; }
+  background: url("../img/questions/questions-bg-1.png") no-repeat top right; }
   .questions__wrap {
     display: flex;
     align-items: start;
@@ -990,17 +989,19 @@ i.mistake {
   .questions__contacts {
     display: flex;
     flex-direction: column;
-    margin-right: 5rem;
     padding: 2.6rem 0; }
   .questions__label {
     color: #faf6f5; }
   .questions__input {
     color: #413f3e; }
   .questions__form {
-    margin-top: 4.15rem; }
+    margin-top: 4.15rem;
+    padding: 0;
+    padding-left: 5rem; }
+  .questions__button {
+    margin-top: 1.2rem; }
 
 .contacts {
-  max-width: 31rem;
   color: #1e1e1e; }
   .contacts__title {
     margin: 0;
@@ -1255,13 +1256,18 @@ i.mistake {
   .news__note {
     position: static;
     max-width: 100%; }
-  .questions__contacts {
-    width: 90%;
-    margin: 0 auto; }
-  .questions__wrap {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center; } }
+  .questions {
+    background: #ffffff; }
+    .questions__contacts {
+      width: 90%;
+      max-width: 29rem;
+      margin: 0 auto; }
+    .questions__wrap {
+      flex-direction: column;
+      align-items: center;
+      margin: auto; }
+    .questions__form {
+      background: #ff5a3c; } }
 
 @media screen and (max-width: 576px) {
   .hero {
@@ -1352,7 +1358,14 @@ i.mistake {
     font-size: 2.5rem;
     line-height: 3.4rem; }
   .play {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    width: 4rem;
+    height: 4rem; }
+    .play::before {
+      width: 6rem;
+      height: 6rem;
+      top: -1rem;
+      left: -1rem; }
   .video {
     padding: 1rem 0; }
     .video__player {

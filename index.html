@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="zxx">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -276,9 +276,8 @@
                 id="cost-user-site" placeholder="tatsianapavlenko.ru">
             </div>
             <div class="input-group form__input-group">
-              <label for="cost-user-message " class="label form__label cost__label">Сообщение</label>
-              <input type="text" autocomplete="off" name="userMessage" class="input form__input cost__input"
-                id="cost-user-message " placeholder="Введите Ваше сообщение">
+              <label for="cost-user-message" class="label form__label cost__label">Сообщение</label>
+              <input type="text" autocomplete="off" name="userMessage" class="input form__input cost__input" id="cost-user-message" placeholder="Введите Ваше сообщение">
             </div>
             <button class="button button--long cost__button">Узнать стоимость</button>
           </form>
@@ -635,14 +634,16 @@
       <div class="container">
         <div class="questions__wrap">
           <div class="questions__contacts contacts">
-            <h3 class="contacts__title">
-              Остались вопросы?</h3>
-            <h3 class="contacts__title">
-              Напишите нам!
-            </h3>
-            <h3 class="contacts__title">
-              Отправте Ваше сообщение через форму или <span class="contacts__title--red">e-mail</span>.
-            </h3>
+            <div class="contacts__block-title">
+              <h3 class="contacts__title">
+                Остались вопросы?</h3>
+              <h3 class="contacts__title">
+                Напишите нам!
+              </h3>
+              <h3 class="contacts__title">
+                Отправте Ваше сообщение через форму или <span class="contacts__title--red">e-mail</span>.
+              </h3>
+            </div>
             <div class="contacts__address">
               <div class="contacts__place">
                 <h4 class="contacts__subtitle">Адресс</h4>
@@ -670,12 +671,12 @@
             <!-- /.contacts__address -->
           </div>
           <!-- /.questions__contacts -->
-          <form action="send.php" method="POST" class="questions__form">
-            <form action="#" class="form questions__form">
+
+            <form action="send.php" method="POST" class="form questions__form">
               <div class="input-group form__input-group">
                 <label for="questions-user-name" class="label form__label questions__label">Имя</label>
                 <input type="text" autocomplete="off" name="userName" class="input form__input questions__input"
-                  id="cost-user-name" placeholder="Иван Иванов">
+                  id="questions-user-name" placeholder="Иван Иванов">
               </div>
               <div class="input-group form__input-group">
                 <label for="questions-user-email" class="label form__label questions__label">Е-mail</label>
@@ -688,14 +689,13 @@
                   id="questions-user-phone" placeholder="+7 999 888-88-88">
               </div>
               <div class="input-group form__input-group">
-                <label for="questions-user-message " class="label form__label questions__label">Сообщение</label>
+                <label for="questions-user-message" class="label form__label questions__label">Сообщение</label>
                 <input type="text" autocomplete="off" name="userMessage" class="input form__input questions__input"
-                  id="questions-user-message " placeholder="Введите Ваше сообщение">
+                  id="questions-user-message" placeholder="Введите Ваше сообщение">
               </div>
               <button class="button button--long questions__button button--outline">Отправить</button>
             </form>
-          </form>
-          <!-- /.questions__form -->
+            <!-- /.questions__form -->
         </div>
         <!-- /.questions__wrap -->
       </div>

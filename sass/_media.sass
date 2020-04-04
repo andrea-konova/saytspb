@@ -95,13 +95,18 @@
       position: static
       max-width: 100%
   .questions
+    background: $light
     &__contacts
       width: 90%
+      max-width: 29rem
       margin: 0 auto
     &__wrap
-      flex-wrap: wrap
+      flex-direction: column
       align-items: center
-      justify-content: center
+      justify-content: 
+      margin: auto
+    &__form
+      background: $red
 @media screen and ( max-width: 576px )
   .hero
     margin-top: 10rem
@@ -193,6 +198,13 @@
       line-height: 3.4rem
   .play
     margin-bottom: 0
+    width: 4rem
+    height: 4rem
+    &::before
+      width: 6rem
+      height: 6rem
+      top: -1rem
+      left: -1rem
   .video 
     padding: 1rem 0
     &__player
