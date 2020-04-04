@@ -26,6 +26,20 @@ $(document).ready(function () {
     return false;
   });
 
+  // anchor links
+  jQuery(function ($) {
+    $('a[href*="#"]').on('click.smoothscroll', function (e) {
+      var hash = this.hash, _hash = hash.replace(/#/, ''), theHref = $(this).attr('href').replace(/#.*/, '');
+      if (theHref && location.href.replace(/#.*/, '') != theHref) return;
+      var $target = _hash === '' ? $('body') : $(hash + ', a[name="' + _hash + '"]').first();
+      if (!$target.length) return;
+      e.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $target.offset().top - 0 }, 500, 'swing', function () {
+        window.location.hash = hash;
+      });
+    });
+  });
+
   // youtube video
   var player;
   $('.play__img').on('click', function onYouTubeIframeAPIReady() {
@@ -93,9 +107,7 @@ $(document).ready(function () {
         required: true
       },
       userMessage: {
-        required: true,
-        minlength: 10,
-        maxlength: 100
+        required: true
       },
        
     },
@@ -114,8 +126,6 @@ $(document).ready(function () {
       },
       userMessage: {
         required: "Заполните поле",
-        minlength: "Cообщение слишком короткое",
-        maxlength: "Cообщение слишком длинное"
       },
     },
     
@@ -151,12 +161,11 @@ $(document).ready(function () {
         email: true
       },
       userPhone: {
-        required: true
+        required: true,
+        minlength: 17
       },
       userMessage: {
-        required: true,
-        minlength: 10,
-        maxlength: 100
+        required: true
       },
        
     },
@@ -172,11 +181,10 @@ $(document).ready(function () {
       },
       userPhone: {
         required: "Заполните поле",
+        minlength: "Некорректный номер"
       },
       userMessage: {
         required: "Заполните поле",
-        minlength: "Сообщение слишком короткое",
-        maxlength: "Сообщение слишком длинное"
       },
     },
     
@@ -199,8 +207,8 @@ $(document).ready(function () {
 
   // modal__form
   $('.modal__form').validate({
-    errorElement: "em",
-    errorClass: "invalid",
+    errorElement: "i",
+    errorClass: "mistake",
     rules: {
       userName: {
         required: true,
@@ -208,7 +216,8 @@ $(document).ready(function () {
         maxlength: 15
       },
       userPhone: {
-        required: true
+        required: true,
+        minlength: 17
       },
     },
     messages: {
@@ -219,6 +228,7 @@ $(document).ready(function () {
       },
       userPhone: {
         required: "Заполните поле",
+        minlength: "Некорректный номер"
       },
     },
     
@@ -230,6 +240,7 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
+          modal.removeClass('modal--visible');
           thanks.addClass('thanks--visible');
         },
         error: function (response) {

@@ -42,12 +42,22 @@
 label
   &.invalid
     color: $error
+  &.mistake
+    color: $red
 input
   &.invalid
     border-bottom: 1px solid $error
+  &.mistake
+    border: 1px solid $red
 em
   &.invalid
     position: absolute
     top: 0
     right: 1px
     color: $error
+i
+  &.mistake
+    position: absolute
+    bottom: 0
+    left: 5rem
+    color: $red

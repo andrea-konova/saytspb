@@ -16,6 +16,9 @@
         margin-top: 0.5rem
       &__contacts
         margin-top: 0.5rem
+  .features
+    .col-32
+      flex-basis: 47%
   .services
     .row
       justify-content: space-around
@@ -26,6 +29,19 @@
       &-prev, &-next
         bottom: auto
         top: 50%
+  .cases 
+    &__card
+      align-items: center
+      background: $bg-color
+  .card
+    &__content
+      flex-direction: column
+    &__result
+      width: 100%
+    &__statistics
+      margin: auto
+      margin-top: 1.6rem
+      width: 90%
   .form
     width: 80%
     margin: auto
@@ -40,9 +56,13 @@
   .contacts
     &__phone
       padding-right: 1.2rem
-  .features
-    .col-32
-      flex-basis: 47%
+  .item
+    &__number
+      font-size: 3.2rem
+      line-height: 4rem
+    &__text
+      font-size: 1.35rem
+      line-height: 1.3rem
   .form
     width: 90%
     margin: auto
@@ -51,7 +71,16 @@
       background: $bg-color
   .card
       &__img
-        display: none
+        display: none 
+  .cases
+    &-button
+      &-prev, &-next
+        bottom: auto
+        top: 94%
+      &-prev
+        left: 2%
+      &-next
+        right: 2%
   .news
     &__card
       display: flex
@@ -77,13 +106,11 @@
       flex-direction: column
       justify-content: center
       padding: 40px 0 25px 0
-      width: 75%
+      width: 100%
       top: 0
       right: 0
       background-color: #e3fbdd
-      border-left: 2px solid $red
-      border-bottom: 2px solid $red
-      border-bottom-left-radius: 5px
+      border: 2px solid $red
       &__btn 
         display: block
         position: absolute
@@ -142,13 +169,20 @@
       &__phone
         display: none
       &__button
+        width: 16rem
+        height: 3.3rem
         font-size: 16px
     .hero
       &__title
         font-size: 2.5rem
         line-height: 3.4rem
     .video 
-      padding: 2.2rem 0
+      padding: 1rem 0
+      &__player
+        margin: auto
+        max-width: 24.5rem
+        width: 95%
+        height: 14rem  
     .statistics 
       display: none
     .features, .services
