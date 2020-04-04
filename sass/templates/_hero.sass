@@ -1,15 +1,15 @@
 .section-hero
-  background: url('../img/hero/hero-bg.png') no-repeat center center 
+  background: url('../img/hero/hero-bg.png') no-repeat top -20px center
   background-size: cover
 .hero
   display: flex
   justify-content: center
   align-items: start
   flex-direction: column
-  margin-top: 0
+  margin-top: 19.65rem
   padding-bottom: 26rem
-  min-height: 100%
   &__title
+    margin: 0
     margin-bottom: 2.4rem
     max-width: 46rem
     font-size: 3.875rem
@@ -19,33 +19,41 @@
     &--red
       color: $red
   &__text
-    margin-bottom: 2.5rem
+    margin: 0
+    margin-bottom: 2.4rem
     font-size: 1.25rem
     font-weight: 300
     line-height: 1.812rem
     max-width: 35.3rem
   &__social
-    position: absolute
-    left: 0
-    top: 0
-    height: 100%
+    // position: absolute
+    // left: 0
+    // top: 400px
+    // height: 100%
 .social
+  position: absolute
+  top: 169px
+  left: 68px
   display: flex
   align-items: center
-  justify-content: end
-  transform: rotate(90deg)
-  &::before
-    content: ''
-    transform: rotate(-90deg)
-    width: 0.25rem
-    height: 38.75rem
-    border-radius: 0.125rem
-    background-color: $red
+  flex-direction: column
+  &__line
+    margin-bottom: 38px
+    width: 4px
+    height: 620px
+    border-radius: 2px
+    background-color: red
+  // &::before
+  //   content: ''
+  //   transform: rotate(-90deg)
+  //   width: 0.25rem
+  //   height: 38.75rem
+  //   border-radius: 0.125rem
+  //   background-color: $red
   &__link
-    display: flex
-    align-items: center
-    transform: rotate(-90deg)
-    margin-right: 1rem
+    margin-bottom: 38px
+    border-radius: 1px solid red
+    
 
  
       

@@ -484,7 +484,7 @@ i.mistake {
   color: #38393b; }
 
 .section-hero {
-  background: url("../img/hero/hero-bg.png") no-repeat center center;
+  background: url("../img/hero/hero-bg.png") no-repeat top -20px center;
   background-size: cover; }
 
 .hero {
@@ -492,10 +492,10 @@ i.mistake {
   justify-content: center;
   align-items: start;
   flex-direction: column;
-  margin-top: 0;
-  padding-bottom: 26rem;
-  min-height: 100%; }
+  margin-top: 19.65rem;
+  padding-bottom: 26rem; }
   .hero__title {
+    margin: 0;
     margin-bottom: 2.4rem;
     max-width: 46rem;
     font-size: 3.875rem;
@@ -505,34 +505,29 @@ i.mistake {
     .hero__title--red {
       color: #ff5a3c; }
   .hero__text {
-    margin-bottom: 2.5rem;
+    margin: 0;
+    margin-bottom: 2.4rem;
     font-size: 1.25rem;
     font-weight: 300;
     line-height: 1.812rem;
     max-width: 35.3rem; }
-  .hero__social {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%; }
 
 .social {
+  position: absolute;
+  top: 169px;
+  left: 68px;
   display: flex;
   align-items: center;
-  justify-content: end;
-  transform: rotate(90deg); }
-  .social::before {
-    content: '';
-    transform: rotate(-90deg);
-    width: 0.25rem;
-    height: 38.75rem;
-    border-radius: 0.125rem;
-    background-color: #ff5a3c; }
+  flex-direction: column; }
+  .social__line {
+    margin-bottom: 38px;
+    width: 4px;
+    height: 620px;
+    border-radius: 2px;
+    background-color: red; }
   .social__link {
-    display: flex;
-    align-items: center;
-    transform: rotate(-90deg);
-    margin-right: 1rem; }
+    margin-bottom: 38px;
+    border-radius: 1px solid red; }
 
 .video {
   padding: 2.2rem 0 0 0;
@@ -1181,8 +1176,11 @@ i.mistake {
     font-size: 14px; } }
 
 @media screen and (max-width: 992px) {
-  .hero__social {
-    display: none; }
+  .hero {
+    margin-top: 10rem;
+    padding-bottom: 18rem; }
+    .hero__social {
+      display: none; }
   .header .menu {
     flex-wrap: wrap; }
     .header .menu__nav {
@@ -1204,7 +1202,8 @@ i.mistake {
     top: 50%; }
   .cases__card {
     align-items: center;
-    background: #e3fbdd; }
+    background: #e3fbdd;
+    box-shadow: none; }
   .card__content {
     flex-direction: column; }
   .card__result {
@@ -1265,6 +1264,18 @@ i.mistake {
     justify-content: center; } }
 
 @media screen and (max-width: 576px) {
+  .hero {
+    margin-top: 10rem;
+    padding-bottom: 10rem; }
+    .hero__title {
+      margin-bottom: 1.5rem;
+      max-width: 29rem;
+      font-size: 3.875rem;
+      font-weight: 500;
+      line-height: 4.75rem;
+      color: #323232; }
+    .hero__text {
+      margin-bottom: 2rem; }
   .menu {
     display: none;
     position: absolute;
@@ -1340,6 +1351,8 @@ i.mistake {
   .hero__title {
     font-size: 2.5rem;
     line-height: 3.4rem; }
+  .play {
+    margin-bottom: 0; }
   .video {
     padding: 1rem 0; }
     .video__player {
