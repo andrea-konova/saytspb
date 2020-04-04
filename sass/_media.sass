@@ -2,6 +2,35 @@
   html
     font-size: 14px
 @media screen and ( max-width:  992px )
+  .nav
+    &__item
+      &:hover
+        &::after
+          width: 0%
+  .button
+    &:hover
+      cursor: default
+      background-color: $red
+      color: $light
+      border: none
+    &--outline
+      &:hover
+        color: $red
+        border: 0.125rem solid $red
+  .play
+    &:hover
+      cursor: default
+      opacity: 0.68
+      &::before
+        background-color: #090909
+        opacity: 0.4
+  .services
+    &__card
+      &:hover
+        border: 1px solid #c9c8c8
+        box-shadow: none
+        &::after
+          width: 0%
   .hero
     margin-top: 10rem
     padding-bottom: 18rem

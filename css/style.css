@@ -1177,6 +1177,27 @@ i.mistake {
     font-size: 14px; } }
 
 @media screen and (max-width: 992px) {
+  .nav__item:hover::after {
+    width: 0%; }
+  .button:hover {
+    cursor: default;
+    background-color: #ff5a3c;
+    color: #ffffff;
+    border: none; }
+  .button--outline:hover {
+    color: #ff5a3c;
+    border: 0.125rem solid #ff5a3c; }
+  .play:hover {
+    cursor: default;
+    opacity: 0.68; }
+    .play:hover::before {
+      background-color: #090909;
+      opacity: 0.4; }
+  .services__card:hover {
+    border: 1px solid #c9c8c8;
+    box-shadow: none; }
+    .services__card:hover::after {
+      width: 0%; }
   .hero {
     margin-top: 10rem;
     padding-bottom: 18rem; }
