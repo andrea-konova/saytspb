@@ -1,10 +1,15 @@
 .feedback
   background: url('../img/feedback/feedback-bg.png') no-repeat center center
+  padding-top: 1.6rem
+  padding-bottom: 4rem
   &-title
     &__heading
       margin-bottom: 1.8rem
+      padding-right: 0.4rem
     &__text
       margin-bottom: 5.162rem
+      padding: 0
+      max-width: 51.5rem
   &__link
     color: $red
   &__block
@@ -15,8 +20,9 @@
     margin-bottom: 1rem
   &__client
     display: flex
-    align-items: center
+    align-items: start
     justify-content: space-between
+    padding-right: 2.3rem
   &__text
     margin: 0
     margin-bottom: 2rem
@@ -28,6 +34,14 @@
     line-height: 2.187rem
   &__client
     margin-bottom: 3.812rem
+  &__button
+    margin-left: 0.8rem
+  &-button
+    &-prev, &-next
+      bottom: auto
+      top: 37%
+    &-next
+      right: 5%
 .client
   &__wrap
     width: 6.562rem
@@ -35,6 +49,7 @@
     margin-right: 1rem
   &__name
     margin: 0
+    margin-top: 1.85rem
     font-size: 1.125rem
     font-weight: 500
     color: #0d0d0d

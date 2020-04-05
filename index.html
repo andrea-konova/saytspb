@@ -7,21 +7,23 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
   <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Yandex.Metrika counter --> <script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(61637974, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/61637974" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
   <header class="section-hero" id="header">
     <div class="social hero__social">
       <div class="social__line"></div>
       <a href="#" class="link social__link"><img src="img/hero/whatsapp.png" alt=""></a>
       <a href="#" class="link social__link"><img src="img/hero/viber.png" alt=""></a>
-      <a href="#" class="link social__link"><img src="img/hero/mail.png" alt=""></a>
+      <a href="mailto:info@saytspb.ru" class="link social__link"><img src="img/hero/mail.png" alt=""></a>
     </div>
     <div class="container">
       <div class="header">
         <div class="menu">
           <div class="logo menu__logo">
-            <a href="#header" class="link logo__link"><img src="img/logo.png" alt="logo" class="logo__image"></a>
+            <a href="#header" class="link logo__link logo__link--mr"><img src="img/logo.png" alt="logo" class="logo__image"></a>
             <a href="#header" class="link logo__link">SAYTSPB</a>
           </div>
           <div class="menu__wrap">
@@ -33,7 +35,7 @@
             </nav>
             <div class="contacts menu__contacts">
               <a href="tel:+78129921030" class="link phone contacts__phone">+7(812)-992-10-30</a>
-              <button class="button contacts__button" data-toggle="modal">Заказать звонок</button>
+              <button onclick="ym('61637974', 'reachGoal', 'button'); return true;" class="button contacts__button" data-toggle="modal">Заказать звонок</button>
             </div>
           </div>
           <!-- /.menu__wrap -->
@@ -41,11 +43,11 @@
         <!-- /.menu -->
       </div>
       <!-- /.header -->
-      <div class="menu__btn"></div> <!-- /.menu__btn -->
+      <div class="header__btn"></div> <!-- /.menu__btn -->
       <div class="hero">
-        <h1 class="title hero__title">Продвижение Сайтов <span class="hero__title--red">в&nbsp;Санкт-Петербурге</span></h1>
-        <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure </p>
-        <button class="button button--long hero__button">Обратный звонок</button>
+        <h1 class="title hero__title wow fadeInRight" data-wow-delay="0.1s">Продвижение Сайтов <span class="hero__title--red">в&nbsp;Санкт-Петербурге</span></h1>
+        <p class="hero__text wow fadeInRight" data-wow-delay="0.3s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure </p>
+        <button onclick="ym('61637974', 'reachGoal', 'button'); return true;" class="button button--long hero__button wow fadeInRight" data-wow-delay="0.5s" data-toggle="modal">Обратный звонок</button>
       </div>
       <!-- /.hero -->
     </div>
@@ -96,10 +98,10 @@
     </section>
     <!-- /.video section -->
     <section class="features section">
-      <div class="container">
+      <div class="container features__container">
         <div class="section-title features__section-title">
-          <h2 class="section-title__heading">Наши Преимущества</h2>
-          <p class="section-title__text">Профессиональный подход - расплывчатая формулировка, которой давно не принято доверять. Лучший способ рекламы - благоприятные отзывы заказчиков и практические примеры работ, которые представлены ниже. </p>
+          <h2 class="section-title__heading features-title__heading wow fadeInDown" data-wow-delay="0.1s">Наши Преимущества</h2>
+          <p class="section-title__text features-title__text  wow fadeInDown" data-wow-delay="0.3s">Профессиональный подход - расплывчатая формулировка, которой давно не принято доверять. Лучший способ рекламы - благоприятные отзывы заказчиков и практические примеры работ, которые представлены ниже. </p>
         </div>
         <div class="row row__center features__row">
           <div class="features__item col-32">
@@ -133,18 +135,17 @@
           </div>
           <!-- /.features__item -->
           <div class="features__item col-32">
-            <div class="image__wrap">
+            <div class="image__wrap image__wrap--mb">
               <img src="img/features/4.png" alt="users" class="features__image">
             </div>
             <h3 class="features__name">Глубокий анализ</h3>
             <!-- /.features__name -->
-            <p class="features__description">Глубокий анализ целевой аудитории 
-              и статегии развития прямых конкурентов.</p>
+            <p class="features__description">Глубокий анализ целевой аудитории и&nbsp;статегии развития прямых <br>конкурентов.</p>
             <!-- /.features__description -->
           </div>
           <!-- /.features__item -->
           <div class="features__item col-32">
-            <div class="image__wrap">
+            <div class="image__wrap image__wrap--mb">
               <img src="img/features/5.png" alt="sites" class="features__image">
             </div>
             <h3 class="features__name">Актуализация ресурса</h3>
@@ -154,7 +155,7 @@
           </div>
           <!-- /.features__item -->
           <div class="features__item col-32">
-            <div class="image__wrap">
+            <div class="image__wrap image__wrap--mb">
               <img src="img/features/6.png" alt="accautn" class="features__image">
             </div>
             <h3 class="features__name">Ежемесячные отчеты</h3>
@@ -172,8 +173,8 @@
     <section class="services section">
       <div class="container">
         <div class="section-title services__section-title">
-          <h2 class="section-title__heading services-title__heading ">Наши Услуги</h2>
-          <p class="section-title__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ex</p>
+          <h2 class="section-title__heading services-title__heading wow fadeInDown" data-wow-delay="0.1s">Наши Услуги</h2>
+          <p class="section-title__text wow fadeInDown" data-wow-delay="0.3s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ex</p>
         </div>
         <div class="row row__left services__row">
           <div class="services__card col-32 card">
@@ -258,8 +259,8 @@
     <section class="cost section" id="cost">
       <div class="container">
         <div class="form__wrap">
-          <form action="send.php" method="POST" class="form cost__form">
-            <h2 class="form__title">Узнать стоимость</h2>
+          <form action="send.php" method="POST" onsubmit="ym('61637974', 'reachGoal', 'request'); return true;" class="form cost__form">
+            <h2 class="form__title cost__title">Узнать стоимость</h2>
             <div class="input-group form__input-group">
               <label for="cost-user-name" class="label form__label cost__label">Имя</label>
               <input type="text" autocomplete="off" name="userName" class="input form__input cost__input"
@@ -291,8 +292,8 @@
     <section class="cases section">
       <div class="container">
         <div class="section-title cases__section-title">
-          <h2 class="section-title__heading cases-title__heading">Наши Кейсы</h2>
-          <p class="section-title__text cases-title__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ex</p>
+          <h2 class="section-title__heading cases-title__heading wow fadeInDown" data-wow-delay="0.1s">Наши Кейсы</h2>
+          <p class="section-title__text cases-title__text wow fadeInDown" data-wow-delay="0.3s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ex</p>
         </div>
         <div class="swiper-container">
           <!-- Additional required wrapper -->
@@ -482,8 +483,8 @@
     <section class="feedback section">
       <div class="container">
         <div class="section-title feedback__section-title">
-          <h2 class="section-title__heading feedback-title__heading">Отзывы клиентов</h2>
-          <p class="section-title__text feedback-title__text">
+          <h2 class="section-title__heading feedback-title__heading wow fadeInDown" data-wow-delay="0.1s">Отзывы клиентов</h2>
+          <p class="section-title__text feedback-title__text wow fadeInDown" data-wow-delay="0.1s">
             Если Вы хотите оставить отзыв о проделаной работе, какие-нибудь пожелания или свои впечатления, то можете это сделать, написав на <a href="mailto:order@saytspb.com" class="link feedback__link">почту</a> или <a href="https://vk.com/" class="link feedback__link">Вконтакте</a>
           </p>
         </div>
@@ -570,8 +571,8 @@
     <section class="news section">
       <div class="container">
         <div class="section-title news__section-title">
-          <h2 class="section-title__heading news-title__heading">Последние новости</h2>
-          <p class="section-title__text news-title__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ex</p>
+          <h2 class="section-title__heading news-title__heading wow fadeInDown" data-wow-delay="0.1s">Последние новости</h2>
+          <p class="section-title__text news-title__text wow fadeInDown" data-wow-delay="0.3s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ex</p>
         </div>
         <div class="swiper-container">
           <!-- Additional required wrapper -->
@@ -579,7 +580,7 @@
               <!-- Slides -->
               <div class="swiper-slide">
                 <div class="news__card">
-                  <img src="img/news/news.png" alt="calendar" class="card__img">
+                  <img src="img/news/news.jpg" alt="calendar" class="card__img">
                   <div class="news__day day">
                     <p class="day__number">01</p>
                     <p class="day__month">Апр</p>
@@ -587,7 +588,7 @@
                   <div class="news__note">
                     <h3 class="note__title">Важнейшие факторы SEO в 2019 году</h3>
                     <p class="note__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-                    <button class="button button--long feedback__button">Читать далее</button>
+                    <button class="button button--long news__button">Читать далее</button>
                   </div>
                 </div>
               </div>
@@ -601,7 +602,7 @@
                   <div class="news__note">
                     <h3 class="note__title">Важнейшие факторы SEO в 2019 году</h3>
                     <p class="note__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-                    <button class="button button--long feedback__button">Читать далее</button>
+                    <button class="button button--long news__button">Читать далее</button>
                   </div>
                 </div>
               </div>
@@ -615,7 +616,7 @@
                   <div class="news__note">
                     <h3 class="note__title">Важнейшие факторы SEO в 2019 году</h3>
                     <p class="note__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-                    <button class="button button--long feedback__button">Читать далее</button>
+                    <button class="button button--long news__button">Читать далее</button>
                   </div>
                 </div>
               </div>
@@ -631,6 +632,9 @@
     </section>
     <!-- /.news section -->
     <section class="questions section" id="questions">
+      <div class="bg-image">
+        <img src="img/questions/questions-bg-1.png" alt="123" class="bg-image__img">
+      </div>
       <div class="container">
         <div class="questions__wrap">
           <div class="questions__contacts contacts">
@@ -641,7 +645,7 @@
                 Напишите нам!
               </h3>
               <h3 class="contacts__title">
-                Отправте Ваше сообщение через форму или <span class="contacts__title--red">e-mail</span>.
+                Отправте Ваше сообщение через форму или <a href="mailto:info@saytspb.ru" class="contacts__title--red">e-mail</a>.
               </h3>
             </div>
             <div class="contacts__address">
@@ -672,7 +676,7 @@
           </div>
           <!-- /.questions__contacts -->
 
-            <form action="send.php" method="POST" class="form questions__form">
+            <form action="send.php" method="POST" onsubmit="ym('61637974', 'reachGoal', 'request'); return true;"  class="form questions__form">
               <div class="input-group form__input-group">
                 <label for="questions-user-name" class="label form__label questions__label">Имя</label>
                 <input type="text" autocomplete="off" name="userName" class="input form__input questions__input"
@@ -724,7 +728,7 @@
   <div class="modal">
     <div class="modal__dialog">
       <button class="modal__close"></button>
-      <form action="send.php" method="POST" class="modal__form">
+      <form action="send.php" method="POST" onsubmit="ym('61637974', 'reachGoal', 'request'); return true;"  class="modal__form">
         <div class="input-group form__input-group">
           <input type="text" autocomplete="off" name="userName" class="input form__input modal__input" id="modal-user-name" placeholder="Ваше имя">
         </div>
@@ -753,6 +757,7 @@
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
   <script src="js/swiper.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

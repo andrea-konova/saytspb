@@ -1,7 +1,18 @@
 @media screen and ( max-width: 1200px )
   html
     font-size: 14px
+  .container
+    width: 85%
+  .bg-image
+    position: absolute
+    width: 57%
+    height: 100% 
+  .features
+    &__item
+      padding-right: 0
 @media screen and ( max-width:  992px )
+  .bg-image
+    display: none
   .nav
     &__item
       &:hover
@@ -25,6 +36,7 @@
         background-color: #090909
         opacity: 0.4
   .services
+    padding-bottom: 2.6rem
     &__card
       &:hover
         border: 1px solid #c9c8c8
@@ -47,6 +59,14 @@
         margin-top: 0.5rem
       &__contacts
         margin-top: 0.5rem
+  .item
+    &__text
+      padding: 0 0.5rem
+      line-height: 1.3rem
+  .image
+    &__wrap
+      &--mb
+        margin-bottom: 0.85rem
   .features
     .col-32
       flex-basis: 47%
@@ -61,6 +81,9 @@
         bottom: auto
         top: 50%
   .cases 
+    &__section
+      &-title
+        padding-top: 1rem
     &__card
       align-items: center
       background: $bg-color
@@ -78,10 +101,30 @@
     width: 80%
     margin: auto
     padding: 3.25rem
+    &__wrap
+      background: $bg-color
   .news
     &__note
       top: 1.5rem
       left: 6.1rem
+    &-title
+      &__heading
+        padding-left: 0
+      &__text
+        padding-left: 0
+  .questions
+    background: $light
+    &__contacts
+      width: 90%
+      max-width: 45rem
+      margin: 0 auto
+    &__wrap
+      flex-direction: column
+      align-items: center
+      justify-content: 
+      margin: auto
+    &__form
+      background: $red
 @media screen and ( max-width: 760px )
   html
     font-size: 12px
@@ -99,11 +142,12 @@
     width: 90%
     margin: auto
     padding: 3.25rem
-    &__wrap
-      background: $bg-color
   .card
       &__img
         display: none 
+  .features
+    &__item 
+      padding: 0 0.8rem
   .cases
     &-button
       &-prev, &-next
@@ -122,24 +166,10 @@
       margin-right: 1.312rem
     &__note
       position: static
-      max-width: 100%
-  .questions
-    background: $light
-    &__contacts
-      width: 90%
-      max-width: 29rem
-      margin: 0 auto
-    &__wrap
-      flex-direction: column
-      align-items: center
-      justify-content: 
-      margin: auto
-    &__form
-      background: $red
 @media screen and ( max-width: 576px )
   .hero
-    margin-top: 10rem
-    padding-bottom: 10rem
+    margin-top: 5rem
+    padding-bottom: 5rem
     &__title
       margin-bottom: 1.5rem
       max-width: 29rem
@@ -160,46 +190,46 @@
     right: 0
     background-color: #e3fbdd
     border: 2px solid $red
-    &__btn 
+  .header__btn 
+    display: block
+    position: absolute
+    top: 28px
+    right: 20px
+    width: 30px
+    height: 2px
+    background-color: $red
+    border: none
+    cursor: pointer
+    &::before
+      content: ''
       display: block
       position: absolute
-      top: 28px
-      right: 20px
+      margin-top: -8px
+      top: 0
+      right: 0
       width: 30px
       height: 2px
+      transition: transform 0.2s
       background-color: $red
-      border: none
-      cursor: pointer
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      margin-top: 8px
+      top: 0
+      right: 0
+      width: 30px
+      height: 2px
+      transition: transform 0.2s
+      background-color: $red
+    &--active
+      height: 0
       &::before
-        content: ''
-        display: block
-        position: absolute
-        margin-top: -8px
-        top: 0
-        right: 0
-        width: 30px
-        height: 2px
-        transition: transform 0.2s
-        background-color: $red
+        transform: rotate(45deg)
+        margin-top: 0
       &::after
-        content: ''
-        display: block
-        position: absolute
-        margin-top: 8px
-        top: 0
-        right: 0
-        width: 30px
-        height: 2px
-        transition: transform 0.2s
-        background-color: $red
-      &--active
-        height: 0
-        &::before
-          transform: rotate(45deg)
-          margin-top: 0
-        &::after
-          transform: rotate(-45deg)
-          margin-top: 0
+        transform: rotate(-45deg)
+        margin-top: 0
   .menu--active
     display: flex
   .nav
@@ -215,6 +245,9 @@
   .contacts
     display: flex
     flex-direction: column
+    &__address
+      display: flex
+      flex-direction: column
     &__phone
       display: none
     &__button
@@ -243,6 +276,9 @@
       height: 14rem  
   .statistics 
     display: none
+  .card
+    &__result
+      padding-right: 1.5rem
   .features, .services
     &__row
       margin-top: 1rem
@@ -258,6 +294,8 @@
         margin-bottom: 2rem
     &__button
       margin-top: 2rem
+    &__text
+      font-size: 1rem
   .feedback
     &-button
       &-prev, &-next
@@ -269,8 +307,18 @@
     &__note
       position: static
       max-width: 100%
+    &__card
+      margin-bottom: 8rem
+    &-button
+      &-prev, &-next
+        bottom: 10%
+        top: auto
   .note
     &__info
       max-width: 100%
+  .contacts
+    &__title
+      font-size: 2rem
+      line-height: 2.4rem
 
       

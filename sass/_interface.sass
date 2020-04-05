@@ -29,6 +29,7 @@
   position: fixed
   bottom: 2rem
   right: 2rem
+  z-index: 99
   display:none
   text-indent: -9999px
   background: url('../img/up-arrow.png') no-repeat
@@ -52,8 +53,8 @@ input
 em
   &.invalid
     position: absolute
-    top: 0
-    right: 1px
+    bottom: -1rem
+    left: 0.5rem
     color: $error
 i
   &.mistake

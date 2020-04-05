@@ -2,11 +2,11 @@
 $(document).ready(function () {
   //burger-menu
   $(document).ready(function () {
-    var menuButton = $('.menu__btn'),
+    var menuButton = $('.header__btn'),
         menu = $('.menu');
   
     menuButton.on('click', function () {
-      menuButton.toggleClass('menu__btn--active');
+      menuButton.toggleClass('header__btn--active');
       menu.toggleClass('menu--active');
     })
 
@@ -65,6 +65,9 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev',
     }
   })
+
+  // wow animate
+  new WOW().init();
 
   // modal windows
   var modal = $('.modal'),
