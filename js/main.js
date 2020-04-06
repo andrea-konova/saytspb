@@ -1,16 +1,32 @@
 
 $(document).ready(function () {
-  //burger-menu
-  $(document).ready(function () {
-    var menuButton = $('.header__btn'),
-        menu = $('.menu');
-  
-    menuButton.on('click', function () {
-      menuButton.toggleClass('header__btn--active');
-      menu.toggleClass('menu--active');
-    })
+  //fixed-menu
+  var $menu = $("#menu");
+             
+  $(window).scroll(function(){
+      if ( $(this).scrollTop() > 100 && $menu.hasClass("default") ){
+          $menu.fadeOut('fast',function(){
+              $(this).removeClass("default")
+                      .addClass("fixed")
+                      .fadeIn('fast');
+          });
+      } else if($(this).scrollTop() <= 100 && $menu.hasClass("fixed")) {
+          $menu.fadeOut('fast',function(){
+              $(this).removeClass("fixed")
+                      .addClass("default")
+                      .fadeIn('fast');
+          });
+      }
+  });
 
-  }); 
+  //burger-menu
+  var menuButton = $('.header__btn'),
+      menu = $('.menu');
+
+  menuButton.on('click', function () {
+    menuButton.toggleClass('header__btn--active');
+    menu.toggleClass('menu--active');
+  })
 
   // up-arrow jquery
   $(window).scroll(function () {
@@ -254,6 +270,7 @@ $(document).ready(function () {
   });
 
   // mask for tel
-  $('[type=tel]').mask('+7(000) 000-00-00', { placeholder: "+7 (___) ___-__-__" });
+  $('[type=tel]').mask('+7(000) 000-00-00', { placeholder: "+7 (999) 888-88-88" });
 
+  $('[type=phone]').mask('+7(000) 000-00-00', { placeholder: "Ваш номер телефона" });
 })

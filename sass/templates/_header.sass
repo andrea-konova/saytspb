@@ -1,8 +1,16 @@
 .header
+.default
   padding-top: 30px
+  width: 100%
+.fixed
+  position: fixed
   left: 0
   top: 0
   width: 100%
+  padding: 1rem 3rem
+  margin: 0
+  z-index: 99
+  background-color: $light
 .menu
   display: flex
   justify-content: space-between
@@ -30,13 +38,13 @@
 .nav
   display: flex
   flex-direction: row
-  padding-right: 2.3rem
+  padding-right: 2.8rem
   font-size: 1rem
   font-weight: 300
   text-transform: uppercase
   color: $dark
   &__item
-    margin-right: 1.2rem
+    margin-right: 1.5rem
     text-decoration: none
     color: $dark
     &:last-child
@@ -55,7 +63,7 @@
         width: 60%
 .contacts__phone
   margin-top: 1rem
-  padding-right: 2.3rem
+  padding-right: 2.8rem
   font-size: 1.125rem
   text-decoration: none
   font-weight: 500

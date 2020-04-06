@@ -387,7 +387,7 @@ img {
   right: 2rem;
   z-index: 99;
   text-indent: -9999px;
-  background: url("../img/up-arrow.png") no-repeat; }
+  background: url("../img/up-arrow-1.png") no-repeat; }
 
 .input-group {
   position: relative;
@@ -420,11 +420,19 @@ i.mistake {
   left: 5rem;
   color: #ff5a3c; }
 
-.header {
+.default {
   padding-top: 30px;
+  width: 100%; }
+
+.fixed {
+  position: fixed;
   left: 0;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  padding: 1rem 3rem;
+  margin: 0;
+  z-index: 99;
+  background-color: #ffffff; }
 
 .menu {
   display: flex;
@@ -455,13 +463,13 @@ i.mistake {
 .nav {
   display: flex;
   flex-direction: row;
-  padding-right: 2.3rem;
+  padding-right: 2.8rem;
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
   color: #38393b; }
   .nav__item {
-    margin-right: 1.2rem;
+    margin-right: 1.5rem;
     text-decoration: none;
     color: #38393b; }
     .nav__item:last-child {
@@ -480,7 +488,7 @@ i.mistake {
 
 .contacts__phone {
   margin-top: 1rem;
-  padding-right: 2.3rem;
+  padding-right: 2.8rem;
   font-size: 1.125rem;
   text-decoration: none;
   font-weight: 500;
@@ -633,6 +641,9 @@ i.mistake {
   .image__wrap--mb {
     margin-bottom: 0; }
 
+_:-ms-fullscreen, :root .col-32 {
+  flex-basis: auto; }
+
 .services {
   padding-bottom: 12rem;
   padding-top: 1.2rem;
@@ -691,6 +702,9 @@ i.mistake {
     color: #2c2c2d; }
   .services .card__wrap {
     margin: 2.8rem auto 2.45rem auto; }
+
+_:-ms-fullscreen, :root .card__wrap {
+  margin-left: 2rem; }
 
 .form {
   display: flex;
@@ -1020,7 +1034,8 @@ i.mistake {
 
 .questions {
   position: relative;
-  padding: 2.7rem 0 2.4rem 0; }
+  padding: 2.7rem 0 2.4rem 0;
+  overflow: hidden; }
   .questions__wrap {
     display: flex;
     align-items: start;
@@ -1032,7 +1047,8 @@ i.mistake {
   .questions__label {
     color: #faf6f5; }
   .questions__input {
-    color: #413f3e; }
+    color: #413f3e;
+    border-bottom: 1px solid #939497; }
   .questions__form {
     margin-top: 4.2rem;
     padding: 0;
@@ -1090,12 +1106,18 @@ i.mistake {
 
 .bg-image {
   position: absolute;
-  width: 59.5%;
+  width: 100%;
   height: 100%;
   top: 0;
-  right: 0; }
+  left: 40.5%; }
   .bg-image__img {
     height: 100%; }
+
+_:-ms-fullscreen, :root .contacts__title {
+  max-width: 30rem; }
+
+_:-ms-fullscreen, :root .bg-image {
+  left: 38%; }
 
 .footer {
   padding-top: 2.97rem;
@@ -1182,6 +1204,13 @@ i.mistake {
   .modal__button {
     margin: auto; }
 
+_:-ms-fullscreen, :root .modal__input {
+  padding-bottom: 1.4rem; }
+
+_:-ms-fullscreen, :root .modal__form {
+  padding-right: 2rem;
+  padding-left: 2rem; }
+
 .thanks {
   opacity: 0;
   visibility: hidden;
@@ -1226,12 +1255,14 @@ i.mistake {
 @media screen and (max-width: 1200px) {
   html {
     font-size: 14px; }
+  .nav {
+    padding-right: 2.3rem; }
+    .nav__item {
+      margin-right: 1.2rem; }
+  .contacts__phone {
+    padding-right: 2.3rem; }
   .container {
     width: 85%; }
-  .bg-image {
-    position: absolute;
-    width: 57%;
-    height: 100%; }
   .features__item {
     padding-right: 0; } }
 
@@ -1366,6 +1397,8 @@ i.mistake {
     position: static; } }
 
 @media screen and (max-width: 576px) {
+  .section-hero {
+    background: url("../img/hero/hero-bg.jpg") no-repeat bottom -11rem left 2rem; }
   .hero {
     margin-top: 5rem;
     padding-bottom: 5rem; }
@@ -1505,5 +1538,5 @@ i.mistake {
   .note__info {
     max-width: 100%; }
   .contacts__title {
-    font-size: 2rem;
+    font-size: 1.7rem;
     line-height: 2.4rem; } }
